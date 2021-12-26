@@ -1,0 +1,22 @@
+{
+  "name": "Neon Tagger Bot",
+  "logo":"https://telegra.ph/",
+  "description": "Neon tagger bot",
+  "env": {
+    "TOKEN": {
+      "description": "1988366772:AAFYZoN0BU2SzsIL9fLTlP1K541vqxir3Y",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "2772229",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "4b47a1310251bf8ce2e66c78525f55c",
+      "value": ""
+    }
+  },
+  "buildpacks": [{
+    "url": "https://github.com/heroku/heroku-buildpack-python.git"
+  }]
+}
