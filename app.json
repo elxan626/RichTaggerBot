@@ -1,18 +1,18 @@
 {
-  "name": "Neon Tagger Bot",
-  "logo":"https://telegra.ph/",
-  "description": "Neon tagger bot",
+  "name": "Rich Tagger Bot",
+  "logo":"https://telegra.ph/file/243a7b19fb8d1e978ca34.jpg",
+  "description": "Rich Tagger bot",
   "env": {
     "TOKEN": {
-      "description": "1988366772:AAFYZoN0BU2SzsIL9fLTlP1K541vqxir3Y",
+      "description": "@BotFather ilə ala bilərsən",
       "value": ""
     },
     "APP_ID": {
-      "description": "2772229",
+      "description": "my.telegram.org ilə ala bilərsən",
       "value": ""
     },
     "API_HASH": {
-      "description": "4b47a1310251bf8ce2e66c78525f55c",
+      "description": "my.telegram.org ilə ala bilərsən",
       "value": ""
     }
   },
