@@ -26,21 +26,21 @@ async def cancel(event):
 @client.on(events.NewMessage(pattern="^/start$"))
 
 async def start(event):
-  await event.reply("**Neon Tagger Bot**,\n💭Qrupda və ya kanalda📣 demək olar ki, hər hansı bir üzvdən bəhs edə bilərəm ★\nƏtraflı məlumat ücün **/help**'i basın.",
+  await event.reply("Salam 👋\n\nMən sizin əvəzinizdən qruplarnızda istifadəçiləri tag edə bilərəm.\n\nHaqqımda daha ətraflı məlumat əldə etmək üçün /help əmrinə toxunun.",
                     buttons=(
-                      [[Button.url('🌟 Məni bir qrupa əlavə et', 'https://t.me/NeonTaggerBot?startgroup=true')],
-                      [Button.url('📣 Yeniliklər', 'https://t.me/NeonUserBot'),
-                      Button.url('🛠 Support', 'https://t.me/neonsup')]]
+                      [[Button.url('🌟 Məni bir qrupa əlavə et', 'https://t.me/RichTaggerBot?startgroup=true')],
+                      [Button.url('📣 Yeniliklər', 'https://t.me/RichTaggerYenilikler'),
+                      Button.url('🛠 Support', 'https://t.me/RichTaggerSupport')]]
                     ),
                     link_preview=False
                    )
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**Neon Tagger Bot'un Help Meniyusu**\n\nKomut: /all \n  Bu əmri başqalarına izah etmək istədiyiniz mətnlə istifadə edə bilərsiniz. \n`Nümunə: /all Saboohun xeyir!`  \nBu əmri cavab olaraq istifadə edə bilərsiniz. hər hansı bir mesaj Bot istifadəçiləri cavablandırılan mesaja etiketləyəcək"
+  helptext = "**Rich Tagger Bot'un Kömək Menyusu**\n\nƏmr: /all \n  Bu əmri başqalarına izah etmək istədiyiniz mətnlə istifadə edə bilərsiniz. \n`Nümunə: /all Salam Dostlar!`  \nBu əmri cavab olaraq istifadə edə bilərsiniz. Hər hansı bir mesaj Bot istifadəçiləri cavablandırılan mesaja etiketləyəcək"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('🌟 Məni bir qrupa əlavə et', 'https://t.me/NeonTaggerBot?startgroup=true'),
-                       Button.url('📣 Support', 'https://t.me/neonsup')]
+                      [Button.url('🌟 Məni bir qrupa əlavə et', 'https://t.me/RichTaggerBot?startgroup=true'),
+                       Button.url('📣 Support', 'https://t.me/RichTaggerSupport')]
                     ),
                     link_preview=False
                    )
@@ -50,13 +50,13 @@ async def help(event):
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("__Bu əmr qruplarda və kanallarda istifadə edilə bilər!__")
+    return await event.respond("__Bu əmr qruplarda və kanallarda istifadə edilə bilər❗__")
 
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("__Yalnız adminlər tərəfindən qeyd edilə bilər!__")
+    return await event.respond("__Yalnız adminlər tərəfindən qeyd edilə bilər❗__")
 
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -67,9 +67,9 @@ async def mentionall(event):
     if msg == None:
         return await event.respond("__Köhnə yazıların üzvlərindən bəhs edə bilmərəm! (qrupa əlavə etməzdən əvvəl göndərilən mesajlar)__")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("__Bana bir argüman ver!__")
+    return await event.respond("__Mənə bir arqument ver❗__")
   else:
-    return await event.respond("__Başqalarını qeyd etmək üçün bir mesaja cavab verin və ya mənə bir mesaj verin!__")
+    return await event.respond("__Başqalarını qeyd etmək üçün bir mesaja cavab verin və ya mənə bir mesaj verin❗__")
 
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -79,10 +79,10 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("❌Proses uğurla dayandırıldı ❌")
+        await event.respond("**Proses uğurla dayandırıldı** ❌")
         return
       if usrnum == 5:
-        await client.send_message(event.chat_id, f"{msg}\n\n{usrtxt}")
+        await client.send_message(event.chat_id, f"{msg}\n{usrtxt}")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -97,7 +97,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("❌Proses uğurla dayandırıldı❌")
+        await event.respond("**Proses uğurla dayandırıldı** ❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -105,6 +105,6 @@ async def mentionall(event):
         usrnum = 0
         usrtxt = ""
 
-
-print(">> Bot işləyir narahat olma can cigər /n Ətrali melumat üçün 🚀 @NeonSup məlumat ala bilərsiniz <<")
+Ye
+print(">> Bot işləyir narahat olma, 🚀 məlumat almaq üçün @muellime <<")
 client.run_until_disconnected()
