@@ -1,5 +1,5 @@
 # Rich Tagger Bot
-_**Bu bot, qruplarda 10.000'ə qədər useri və kanallarda 200'ə qədər useri tağ ede bilər. !**_
+_**Bu bot, qruplarda 10.000'ə qədər useri və kanallarda 200'ə qədər useri tağ ede bilər !**_
 
 ### 🏷 İnfo
 - Dil: Python.
@@ -9,4 +9,4 @@ _**Bu bot, qruplarda 10.000'ə qədər useri və kanallarda 200'ə qədər useri
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/elxan626/RichTaggerBot)
 
 ### 🎯 Mənimlə əlaqə
-- [Telegam](https://t.me/muellime) ;)
+- [Telegam](https://t.me/muellime) :)
