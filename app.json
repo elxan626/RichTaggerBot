@@ -1,7 +1,7 @@
 {
   "name": "Rich Tagger Bot",
   "logo":"https://telegra.ph/file/243a7b19fb8d1e978ca34.jpg",
-  "description": "Rich Tagger bot",
+  "description": "Rich Tagger Bot qrupunuzdakı bütün userleri tag edə bilər.",
   "env": {
     "TOKEN": {
       "description": "@BotFather ilə ala bilərsən",
